@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ec5f87">
+  <link rel="canonical" href="https://www.caihui.com/">
+  <title>www.caihui.com - 苑馨彩卉最美丽</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      min-height: 100%;
+      background: #ec5f87;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      min-height: 100svh;
+      font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", sans-serif;
+      color: #fff;
+      background:
+        radial-gradient(circle at 18% 18%, rgba(255, 217, 229, 0.9) 0 8%, transparent 22%),
+        radial-gradient(circle at 82% 24%, rgba(255, 242, 167, 0.85) 0 7%, transparent 20%),
+        radial-gradient(circle at 74% 82%, rgba(158, 231, 198, 0.85) 0 9%, transparent 23%),
+        linear-gradient(135deg, #ec5f87 0%, #6f5bd8 48%, #1c9d92 100%);
+    }
+
+    main {
+      position: relative;
+      display: grid;
+      min-height: 100vh;
+      min-height: 100svh;
+      place-items: center;
+      padding: max(24px, env(safe-area-inset-top)) max(18px, env(safe-area-inset-right)) max(24px, env(safe-area-inset-bottom)) max(18px, env(safe-area-inset-left));
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .domain {
+      position: fixed;
+      top: max(16px, env(safe-area-inset-top));
+      left: 50%;
+      z-index: 2;
+      transform: translateX(-50%);
+      padding: 9px 16px;
+      border: 1px solid rgba(255, 255, 255, 0.42);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.16);
+      box-shadow: 0 14px 36px rgba(39, 17, 62, 0.18);
+      backdrop-filter: blur(12px);
+      font-size: clamp(14px, 3.5vw, 18px);
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .flower-field {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.95;
+    }
+
+    .petal {
+      position: absolute;
+      width: clamp(54px, 8vw, 112px);
+      aspect-ratio: 1;
+      border-radius: 58% 42% 62% 38%;
+      background: rgba(255, 255, 255, 0.52);
+      box-shadow: 0 18px 48px rgba(64, 23, 79, 0.2);
+      transform: rotate(var(--rotate));
+    }
+
+    .petal::before,
+    .petal::after {
+      content: "";
+      position: absolute;
+      inset: 18%;
+      border-radius: inherit;
+      background: rgba(255, 166, 191, 0.55);
+      transform: rotate(62deg);
+    }
+
+    .petal::after {
+      inset: 36%;
+      background: #ffe981;
+      border-radius: 50%;
+    }
+
+    .petal:nth-child(1) { left: 6%; top: 12%; --rotate: -18deg; }
+    .petal:nth-child(2) { right: 8%; top: 13%; --rotate: 26deg; }
+    .petal:nth-child(3) { left: 12%; bottom: 9%; --rotate: 33deg; }
+    .petal:nth-child(4) { right: 14%; bottom: 11%; --rotate: -31deg; }
+    .petal:nth-child(5) { left: 46%; top: 5%; --rotate: 10deg; }
+
+    .title-wrap {
+      position: relative;
+      z-index: 1;
+      width: min(100%, 1000px);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(52px, 11vw, 136px);
+      line-height: 1.12;
+      letter-spacing: 0;
+      text-wrap: balance;
+      text-shadow:
+        0 5px 0 rgba(114, 35, 91, 0.35),
+        0 18px 46px rgba(39, 17, 62, 0.42);
+    }
+
+    .glow {
+      position: absolute;
+      inset: 50% auto auto 50%;
+      z-index: -1;
+      width: min(86vw, 860px);
+      aspect-ratio: 1.6;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.22);
+      filter: blur(32px);
+      transform: translate(-50%, -50%);
+    }
+
+    @media (max-width: 520px) {
+      .petal:nth-child(5) {
+        display: none;
+      }
+
+      h1 {
+        max-width: 7em;
+        margin: 0 auto;
+        font-size: clamp(44px, 17vw, 76px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="domain">www.caihui.com</div>
+    <div class="flower-field" aria-hidden="true">
+      <span class="petal"></span>
+      <span class="petal"></span>
+      <span class="petal"></span>
+      <span class="petal"></span>
+      <span class="petal"></span>
+    </div>
+    <section class="title-wrap" aria-label="主标题">
+      <div class="glow"></div>
+      <h1>苑馨彩卉最美丽</h1>
+    </section>
+  </main>
+</body>
+</html>
